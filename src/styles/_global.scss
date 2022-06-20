@@ -1,0 +1,56 @@
+@use "./mixins"as *;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0 auto;
+  font-family: 'Space Mono', monospace;
+  max-width: 767px;
+  // width: 320px;
+  line-height: 1.8rem;
+  font-weight: 400;
+  margin: 1.6rem 0;
+  padding: 0 2rem;
+  // background-color: hsl(0, 0%, 98%);
+  padding: 1rem 2rem;
+  background-color: #f6f8ff;
+
+  @include tablet {
+    // width: 768px;
+    max-width: 1440px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  @include desktop {
+    // width: 1280px;
+    max-width: 1920px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+
+div,
+p,
+h1,
+h2,
+h3,
+button,
+label,
+input,
+ul,
+span,
+img {
+  margin: 0;
+}

@@ -1,0 +1,14 @@
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    &--right {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}

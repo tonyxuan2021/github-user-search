@@ -1,0 +1,23 @@
+.search {
+    &__input {
+        width: 100%;
+        border: none;
+    }
+
+    &__form {
+        display: flex;
+        border: 1px solid lightgray;
+        padding: 1.5rem 2.5rem;
+        border-radius: 15px;
+        background-color: #fefefe;
+        margin-bottom: 1rem;
+    }
+
+    &__btn {
+        border: none;
+        background-color: #0079ff;
+        color: #fefefe;
+        border-radius: 5px;
+        padding: 0.5rem;
+    }
+}
