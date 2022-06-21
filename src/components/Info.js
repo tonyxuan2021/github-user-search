@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../context";
 import "./User.scss";
 
 const Info = () => {
+  const { githubUser } = useContext(AppContext);
+  const { public_repos, followers, following } = githubUser;
+
   return (
     <div className="info">
       <div className="info__wrapper">
-        <p>Repos</p>
-        <p className="info__num">8</p>
+        <p className="info__header">Repos</p>
+        <p className="info__num">{public_repos}</p>
       </div>
       <div className="info__wrapper">
-        <p>Followers</p>
-        <p className="info__num">3938</p>
+        <p className="info__header">Followers</p>
+        <p className="info__num">{followers}</p>
       </div>
       <div className="info__wrapper">
-        <p>Following</p>
-        <p className="info__num">9</p>
+        <p className="info__header">Following</p>
+        <p className="info__num">{following}</p>
       </div>
     </div>
   );

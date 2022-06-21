@@ -1,3 +1,4 @@
+@use "../styles/mixins" as *;
 
 
 .intro {
@@ -8,13 +9,24 @@
 
     &--top {
         display: flex;
+        justify-content: space-around;
         align-items: center;
         gap: 2rem;
+
+        @include desktop {
+            position: relative;
+            justify-content: flex-start;
+        }
+        
 
         &--right {
             display: flex;
             flex-direction: column;
             gap: 1rem;
+
+            @include desktop {
+                margin-left: 20rem;
+            }
         }
     }
 
@@ -22,7 +34,42 @@
         width: 70px;
         // height: 50px;
         object-fit: cover;
+        border-radius: 50%;
+
+        @include tablet {
+            width: 11rem;
+        }
+
+        @include desktop {
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 15rem;
+        }
     }
+
+    &__login {
+        color: #0079ff;
+    }
+
+    &__date {
+        color: #697c9a;
+    }
+
+    &--btm {
+        color: #697c9a;
+        line-height: 1.8;
+
+        @include tablet {
+            margin-bottom: 1rem;
+        }
+
+        @include desktop {
+            margin-left: 20rem;
+        }
+    }
+
+
 }
 
 .user {
@@ -30,16 +77,30 @@
     border: 1px solid lightgray;
     border-radius: 15px;
     padding: 6rem 2rem;
+
+    @include desktop {
+        padding: 6rem 6rem;
+    }
 }
 
 .info {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding: 2rem;
+    padding: 2rem 2.5rem;
     border-radius: 10px;
     background-color: #f6f8ff;
     margin-bottom: 2rem;
+
+    @include tablet {
+        padding: 2rem 4rem;
+        margin: 0 2rem;
+        margin-bottom: 3rem;
+    }
+
+    @include desktop {
+        margin-left: 20rem;
+    }
 
     &__wrapper {
         display: flex;
@@ -49,19 +110,45 @@
     &__num {
         text-align: center;
         margin-top: 1.5rem;
+        font-weight: 500;
+
+        @include tablet {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__header {
+        color: #697c9a;
     }
 }
 
 .other {
+
+    @include desktop {
+        margin-left: 20rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         gap: 2rem;
+
+        @include tablet {
+            margin: 0 2rem;
+            margin-bottom: 3rem;
+        }
     }
 
     &__img {
         width: 25px;
+    }
+
+    &__asw {
+        color: #697c9a;
     }
 }

@@ -1,7 +1,13 @@
+@use "../styles/mixins" as *;
+
 .search {
     &__input {
         width: 100%;
         border: none;
+
+        @include tablet {
+            font-size: 2rem;
+        }
     }
 
     &__form {
@@ -11,6 +17,11 @@
         border-radius: 15px;
         background-color: #fefefe;
         margin-bottom: 1rem;
+
+        @include tablet {
+            padding: 2rem 3rem;
+            margin-bottom: 3rem;
+        }
     }
 
     &__btn {
@@ -19,5 +30,10 @@
         color: #fefefe;
         border-radius: 5px;
         padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    &__mag {
+        margin-right: 3rem;
     }
 }
