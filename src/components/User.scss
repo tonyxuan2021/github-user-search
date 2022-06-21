@@ -59,6 +59,7 @@
     &--btm {
         color: #697c9a;
         line-height: 1.8;
+        overflow: hidden;
 
         @include tablet {
             margin-bottom: 1rem;
